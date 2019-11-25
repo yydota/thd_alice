@@ -1,3 +1,11 @@
+## dota2 ##
+*.vpk filter=lfs diff=lfs merge=lfs -text
+*.vtex_c filter=lfs diff=lfs merge=lfs -text
+*.vmesh_c filter=lfs diff=lfs merge=lfs -text
+*.vanim_c filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.usm filter=lfs diff=lfs merge=lfs -text
+*.vsnd_c filter=lfs diff=lfs merge=lfs -text
 ## git-lfs ##
 # Image
 *.psd filter=lfs diff=lfs merge=lfs -text
