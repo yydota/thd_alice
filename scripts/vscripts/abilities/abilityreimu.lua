@@ -123,7 +123,6 @@ function AbilityReimu:OnReimu01Start(keys)
                     attacker = caster,
                     damage = damageFinal,
                     damage_type = keys.ability:GetAbilityDamageType(),
-                    damage_flags = 1
                 }
                 UnitDamageTarget(DamageTable)
                 UtilStun:UnitStunTarget(caster, v, stunDurationReal)
@@ -219,7 +218,6 @@ function AbilityReimu:OnReimu02OnLight(keys)
                         attacker = caster,
                         damage = keys.ability:GetAbilityDamage(),
                         damage_type = keys.ability:GetAbilityDamageType(),
-                        damage_flags = 1
                     }
                     v:EmitSound("Hero_Wisp.Spirits.Target")
                     UnitDamageTarget(DamageTable)
@@ -391,7 +389,6 @@ function AbilityReimu:OnReimu04Think(keys)
                     attacker = caster,
                     damage = keys.ability:GetAbilityDamage() / keys.Damage_Count,
                     damage_type = keys.ability:GetAbilityDamageType(),
-                    damage_flags = 1
                 }
                 UnitDamageTarget(DamageTable)
                 UtilStun:UnitStunTarget(caster, v, keys.Stun_Duration)
@@ -404,7 +401,6 @@ function AbilityReimu:OnReimu04Think(keys)
                         damage = keys.ability:GetAbilityDamage() /
                             keys.Damage_Count,
                         damage_type = keys.ability:GetAbilityDamageType(),
-                        damage_flags = 1
                     }
                     UnitDamageTarget(DamageTable)
                     UtilStun:UnitStunTarget(caster, v, keys.Stun_Duration)
