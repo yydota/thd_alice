@@ -979,11 +979,11 @@
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
-		"AbilityCooldown"	"14 13 12 11"
-		"AbilityManaCost"	"90 105 125 140"
+		"AbilityCooldown"	"12"
+		"AbilityManaCost"	"100 120 140 160"
 		// Stats
 		// ----------------------------------------------------------------
-		"AbilityCastRange"	"650"
+		"AbilityCastRange"	"700"
 		"AOERadius"	"%radius"
 		"ID"	"1999"
 		"precache"
@@ -999,30 +999,50 @@
 				"ScriptFile"	"scripts/vscripts/abilities/abilityReimu.lua"
 				"Function"	"OnReimu01SpellStart"
 				"Target"	"POINT"
+				"BounceTime" "%bounce_time"
+				"DamageFollowPercentage"	"%damage_follow_percentage"
 				"StunDuration"	"%stun_duration"
-				"DamageDecrease"	"%damage_decrease"
+				"StunDurationFollow"	"%stun_duration_follow"
 				"Radius"	"%radius"
+				"FirstDamage"	"%first_damage"
 			}
 		}
 		"AbilitySpecial"
 		{
+
 			"01"
 			{
-				"var_type"	"FIELD_FLOAT"
-				"stun_duration"	"0.5"
+				"var_type"				"FIELD_INTEGER"
+				"bounce_time"			"2 2 2 3"
+				"LinkedSpecialBonus"	"special_bonus_unique_lina_1"
+			}
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"first_damage"			"80 160 240 240"
+				"LinkedSpecialBonus"	"special_bonus_unique_lina_2"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_decrease"	"0.33"
+				"stun_duration"	"0.5"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_INTEGER"
+				"damage_follow_percentage"	"50"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"stun_duration_follow"	"0.4"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_FLOAT"
 				"radius"	"200"
 			}
 		}
-		"AbilityDamage"	"125 205 270 320"
 	}
 
 	"ability_dota2x_reimu02"
