@@ -127,6 +127,7 @@
 		"item"		"item_yukkuri_stick"
 		"item"		"item_nuclear_stick"
 		"item"		"item_bagua"
+		"item"      "item_Magical_Mallet"
 	}
 	
 	"weapons"
