@@ -8863,6 +8863,9 @@
 		"ItemInitialCharges"	"2"
 		"ItemStackable"	"1"
 		"ItemShopTags"	"consumables"
+		"ItemStockMax"	"3"
+		"ItemStockInitial"	"1"
+		"ItemStockTime"	"600"
 		"OnSpellStart"
 		{
 			"Heal"
@@ -8936,10 +8939,22 @@
 				"var_type"	"FIELD_INTEGER"
 				"heal_amount"	"120"
 			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"tooltip_charges"	"2"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"tooltip_stock_time"	"600"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"tooltip_stock_max"	"3"
+			}
 		}
-		"ItemStockMax"	"2"
-		"ItemStockInitial"	"2"
-		"ItemStockTime"	"120"
 	}
 
 	// =================================================================================================================
@@ -13204,6 +13219,7 @@
 	//=================================================================================================================
 	"item_recipe_Magical_Mallet"
 	{
+		"BaseClass"	"item_datadriven"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"8201"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
@@ -13227,6 +13243,7 @@
 	//=================================================================================================================
 	"item_Magical_Mallet"
 	{
+		"BaseClass"	"item_datadriven"
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"8202"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
@@ -13248,7 +13265,23 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		
-		
+		"Modifiers"
+		{
+			"modifier_item_Magical_Mallet"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_all_stats"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	"%bonus_health"
+					"MODIFIER_PROPERTY_MANA_BONUS"	"%bonus_mana"
+				}
+			}
+		}
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
