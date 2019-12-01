@@ -1,13 +1,9 @@
 "AddonInfo"
 {
-	"TeamCount" "4"
-	maps			"1_thdots_map dota"
+	"TeamCount" "2"
+	maps			"1_thdots_map"
 	"IsPlayable"	"1"
 	"1_thdots_map"
-	{
-					"MaxPlayers"                    "10"
-	}
-	"dota"
 	{
 					"MaxPlayers"                    "10"
 	}

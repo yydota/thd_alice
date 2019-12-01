@@ -11701,6 +11701,7 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"			"%bonus_intellect"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
 				}
 			}
 			"modifier_item_bagua_regen_mana"
@@ -11726,10 +11727,15 @@
 		{
 			"01"
 			{
+				"var_type"	"FIELD_FLOAT"
+				"spell_amp"	"25"
+			}
+			"02"
+			{
 				"var_type"	"FIELD_INTEGER"
 				"bonus_intellect"	"40"
 			}
-			"02"
+			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"percent_mana_regen_bonus"	"1"

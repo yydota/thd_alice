@@ -15896,6 +15896,10 @@
 			{	
 				"RemoveOnDeath"				"1"
 				"IsBuff"		"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%sun_spell_amp"
+				}
 			}
 			"modifier_thdots_patchouli_xianzhezhishi_moon"
 			{	
@@ -16015,6 +16019,12 @@
 			{
 				"var_type"		"FIELD_FLOAT"
 				"damage"		"30"
+			}	
+
+			"03"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"sun_spell_amp"		"10"
 			}	
 		}
 	}
