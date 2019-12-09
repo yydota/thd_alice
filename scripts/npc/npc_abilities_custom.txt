@@ -1357,6 +1357,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -1423,7 +1424,7 @@
 							"Center"	"CASTER"
 							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
-							"Radius"	"%damage_radius"
+							"Radius"	"%effect_radius"
 						}
 						"MoveSpeed"	"%move_speed"
 					}
@@ -1468,7 +1469,7 @@
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_radius"	"200"
+				"effect_radius"	"200"
 			}
 			"03"
 			{
@@ -1486,6 +1487,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
@@ -1493,7 +1495,7 @@
 		"AbilityManaCost"	"80 105 125 145"
 		// Stats
 		// ----------------------------------------------------------------
-		"AbilityCastRange"	"300"
+		"AbilityCastRange"	"650"
 		"AbilityChannelTime"	"0.5"
 		"ID"	"2004"
 		"precache"
@@ -1549,7 +1551,7 @@
 			"modifier_thdots_marisa02_think_interval"
 			{
 				"IsHidden"	"0"
-				"Duration"	"%damage_duration"
+				"Duration"	"%spell_duration"
 				"ThinkInterval"	"0.1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnIntervalThink"
@@ -1558,7 +1560,7 @@
 					{
 						"ScriptFile"	"scripts/vscripts/abilities/abilityMarisa.lua"
 						"Function"	"OnMarisa02SpellDamage"
-						"DamageRadius"	"%damage_radius"
+						"DamageRadius"	"%effect_radius"
 						"Caster"	"CASTER"
 						"TargetPoint"	"POINT"
 						"Target"
@@ -1566,7 +1568,7 @@
 							"Center"	"CASTER"
 							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_OTHER"
-							"Radius"	"%damage_radius"
+							"Radius"	"%effect_radius"
 						}
 					}
 				}
@@ -1577,12 +1579,12 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_duration"	"0.5"
+				"spell_duration"	"0.5"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_radius"	"610"
+				"effect_radius"	"610"
 			}			
 		}
 		"AbilityDamage"	"75 150 225 300"
@@ -1597,6 +1599,7 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityCooldown"	"18"
 		// Stats
 		// ----------------------------------------------------------------
@@ -1647,6 +1650,11 @@
 				"ability_duration"	"8"
 				"LinkedSpecialBonus"	"special_bonus_unique_crystal_maiden_1"
 			}			
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"atk_interval"	"1.35"
+			}			
 		}
 		"AbilityDamage"	"25 40 55 70"
 	}
@@ -1658,6 +1666,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityType"	"DOTA_ABILITY_TYPE_HIDDEN"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"1"
 		"Modifiers"
 		{
@@ -1699,6 +1708,7 @@
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"	"100 85 70"
 		"AbilityManaCost"	"250 360 500"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityCastRange"	"900"
@@ -1778,8 +1788,8 @@
 						"Function"	"OnMarisa04SpellThink"
 						"Caster"	"CASTER"
 						"Target"	"TARGET"
-						"DamageWidth"	"%damage_width"
-						"DamageLenth"	"%damage_lenth"
+						"DamageWidth"	"%effect_width"
+						"DamageLenth"	"%effect_lenth"
 					}
 				}
 			}
@@ -1789,12 +1799,12 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_width"	"300"
+				"effect_width"	"300"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_lenth"	"900"
+				"effect_lenth"	"900"
 			}			
 		}
 		"AbilityDamage"	"360 540 720"
@@ -2369,6 +2379,8 @@
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
 		"AbilityCooldown"	"10"
+		"AbilityName" "thdots_aya01"
+		"ScriptFile"	"scripts/vscripts/abilities/abilityAya.lua"
 		"AbilityManaCost"	"80 90 100 110"
 		// Stats
 		// ----------------------------------------------------------------
