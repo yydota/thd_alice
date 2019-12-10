@@ -4722,6 +4722,8 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_suika02"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"	
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -4839,6 +4841,8 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_suika02"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"	
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -4947,6 +4951,8 @@
 		"AbilityTextureName"	"custom/ability_thdots_suika03"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityCastPoint"	"0.0"
 		"AbilityCooldown"	"25 21 17 13"
 		// Stats
@@ -5034,6 +5040,8 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_suika04"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
