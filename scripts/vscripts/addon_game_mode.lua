@@ -467,6 +467,7 @@ G_Bots_Ability_Add = {
 }
 
 G_Bot_List = {}
+G_Courier_List = {}
 G_Bot_Buff_List = {}
 G_Bot_Diff_Text = {"easy", "normal", "hard", "lunatic"}
 
@@ -791,6 +792,27 @@ end
 
 function THDOTSGameMode:Levelup(keys)
     print("THDOTSGameMode:Levelup")
+    print(table.getn(G_Courier_List))
+    
+    local player = PlayerResource:GetPlayer(keys.player - 1)
+    local playerid = keys.player - 1
+    local caster = player:GetAssignedHero()
+
+    for k, v in pairs(G_Courier_List) do
+         local courier = EntIndexToHScript(v)
+         print("test data")
+         print(playerid)
+         print(k)
+         if k == playerid then 
+            local upvalue = caster:GetLevel()
+            if upvalue == 6 then
+                local morph = courier:FindAbilityByName("courier_morph")
+                courier:CastAbilityImmediately(morph, courier:GetPlayerOwnerID())
+            end
+            courier:SetBaseMaxHealth(75 + 20 * upvalue)
+            courier:SetBaseMoveSpeed(240 + 15 * upvalue)
+         end
+    end
 
     if G_IsAIMode == true then
         for k, v in pairs(G_Bot_List) do
@@ -1015,10 +1037,13 @@ function THDOTSGameMode:OnHeroSpawned(keys)
                 local unit = CreateUnitByName("npc_dota_courier",
                                               hero:GetOrigin() +
                                                   (hero:GetForwardVector() * 100),
-                                              false, hero, hero, hero:GetTeam())
+                                              true, hero, hero, hero:GetTeam())
                 unit:SetControllableByPlayer(hero:GetPlayerOwnerID(), true)
                 local ability = unit:FindAbilityByName("courier_burst")
-				ability:SetLevel(1)
+                ability:SetLevel(1)
+                table.insert(G_Courier_List, hero:GetPlayerOwnerID(), unit:entindex())
+                unit:SetBaseMaxHealth(75 + 20 * 1)
+                unit:SetBaseMoveSpeed(240 + 15 * 1)
 				return			
             end, 1.0)
         end
