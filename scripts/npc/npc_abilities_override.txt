@@ -569,6 +569,7 @@
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastPoint"				"0.6"
+		"AnimationPlaybackRate"			"0.75"
 		"AbilityCooldown"				"15 14 13 12"
 		"AbilityManaCost"				"90 100 110 120"
 		
@@ -2597,8 +2598,8 @@
 		{
 			"01"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"12"
+				"var_type"					"FIELD_FLOAT"
+				"value"				"15"
 			}
 		}
 	}

@@ -74,7 +74,7 @@ function OnYugi04SpellEnd(keys)
 	local caster = EntIndexToHScript(keys.caster_entindex)
 	local target = keys.target
 
-	local dealdamage = target:GetMaxHealth() * (keys.DamagePercent+FindTelentValue(caster,"special_bonus_unique_centaur_3")) / 100
+	local dealdamage = target:GetMaxHealth() * (keys.DamagePercent) / 100
 	local damage_table = {
 		ability = keys.ability,
 		victim = target,

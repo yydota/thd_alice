@@ -4461,7 +4461,6 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		// Stats
 		// ----------------------------------------------------------------
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
 		"MaxLevel"	"4"
 		"ID"	"2033"
 		"Modifiers"
@@ -4494,6 +4493,8 @@
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel"	"4"
 		"ID"	"2034"
 		"precache"
@@ -4586,6 +4587,8 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityCastPoint"	"0.5"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
@@ -4593,7 +4596,7 @@
 		"AbilityManaCost"	"120 180 240"
 		// Stats
 		// ----------------------------------------------------------------
-		"AbilityCastRange"	"300"
+		"AbilityCastRange"	"%cast_range"
 		"ID"	"2035"
 		"precache"
 		{
@@ -4685,7 +4688,7 @@
 					"RunScript"
 					{
 						"Target"	"TARGET"
-						"DamagePercent"	"%damage_percent"
+						"DamagePercent"	"%effect_percent"
 						"ScriptFile"	"scripts/vscripts/abilities/abilityYugi.lua"
 						"Function"	"OnYugi04SpellEnd"
 					}
@@ -4712,7 +4715,13 @@
 			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_percent"	"25"
+				"effect_percent"	"25"
+				"LinkedSpecialBonus"	"special_bonus_unique_centaur_3"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"cast_range"	"300"
 			}
 		}
 	}
