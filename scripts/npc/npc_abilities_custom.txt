@@ -1357,6 +1357,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
@@ -1487,6 +1488,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
@@ -1702,6 +1704,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		// "AbilityCooldown"           "0"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -2831,6 +2834,7 @@
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"MaxLevel"	"4"
 		"ID"	"2015"
 		"Modifiers"
@@ -4588,7 +4592,8 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMY_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityCastPoint"	"0.5"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
@@ -4733,6 +4738,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"	
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -15425,6 +15431,8 @@
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityTextureName"		"custom/ability_thdots_komachi01"
 		"AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -15560,8 +15568,10 @@
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		// Stats
 		// ----------------------------------------------------------------
-		"AbilityDamage"			"70 120 170 220"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 
 		"precache"
 		{
@@ -15673,6 +15683,12 @@
 				"var_type"	"FIELD_FLOAT"
 				"radius"	"350"
 			}
+			"03"
+			{
+				"var_type" "FIELD_FLOAT"
+				"damage_val" "70 120 170 220"
+				"LinkedSpecialBonus"		"special_bonus_unique_elder_titan_2"
+			}
 		}
 	}
 
@@ -15684,6 +15700,8 @@
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityTextureName"		"custom/ability_thdots_komachi03"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_3"
+		"SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"		    "SPELL_IMMUNITY_ENEMIES_NO"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -15726,6 +15744,8 @@
 			"modifier_thdots_komachi_03_soul"
 			{
 				"Duration"				"%duration"
+				"IsDebuff"              "1"
+				"IsPurgable"            "0"
 				"OnDestroy"
 				{
 					"RunScript"
@@ -15782,6 +15802,8 @@
 		"AbilityTextureName"		"custom/ability_thdots_komachi04"
 		"AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		
 		// Stats
 		//----------------------------------------------------------------
@@ -15845,6 +15867,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"kill_hp"				"25"
+				"LinkedSpecialBonus"		"special_bonus_unique_elder_titan_4"
 			}
 		}
     }
