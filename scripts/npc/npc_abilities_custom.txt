@@ -14780,6 +14780,7 @@
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
 		"AbilityCooldown"	"11"
 		"AbilityManaCost"	"105 120 135 150"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityCastRange"	"600"
@@ -14829,6 +14830,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"stun_duration"	"1.5"
+				"LinkedSpecialBonus"		"special_bonus_unique_huskar_3"
 			}
 			"02"
 			{
@@ -14860,7 +14862,7 @@
 		"AbilityTextureName"	"custom/ability_thdots_minoriko02"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"				"4"
 		"AbilityCastPoint"		"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
@@ -14932,6 +14934,7 @@
 			{
 				"var_type"			"FIELD_FLOAT"
 				"duration"			"36"
+				"LinkedSpecialBonus"		"special_bonus_unique_huskar_4"
 			}
 		}
 	}
@@ -14944,6 +14947,8 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel"				"4"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 
 		"precache"
 		{
@@ -15004,11 +15009,12 @@
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastPoint"		"0.2"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"		"60"
 		"AbilityManaCost"		"100 175 250"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 
 		// Stats
 		// ----------------------------------------------------------------
@@ -15041,6 +15047,7 @@
 			{	
 				"RemoveOnDeath"				"1"
 				"IsBuff"					"1"
+				"IsPurgable"            "0"
 				"Duration"					"6"
 				"EffectName" 				"particles/heroes/minoriko/ability_minoriko_04_fruit.vpcf"
 				"EffectAttachType"			"follow_origin"
@@ -15054,6 +15061,7 @@
 			{	
 				"RemoveOnDeath"				"1"
 				"IsDebuff"					"1"
+				"IsPurgable"            "0"
 				"Duration"					"6"
 				"Properties"
 				{
@@ -15084,6 +15092,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"radius"	"600"
+				"LinkedSpecialBonus"		"special_bonus_unique_huskar"
 			}
 			"03"
 			{
