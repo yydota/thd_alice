@@ -4100,6 +4100,8 @@
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0"
 		"AbilityCooldown"	"100"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_YES"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityManaCost"	"0"
@@ -4132,6 +4134,9 @@
 		{
 			"modifier_thdots_Mokou_ex"
 			{
+				"IsDebuff"	"1"
+				"IsPurgable"	"0"
+				"IsPurgeException" "1"
 				"Duration"	"%duration"
 			}
 		}
@@ -4157,6 +4162,8 @@
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
 		"AbilityCooldown"	"14"
 		"AbilityManaCost"	"0"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityCastRange"	"450 500 550 600"
@@ -4213,9 +4220,10 @@
 						"Function"	"OnMokou01SpellMove"
 						"Caster"	"CASTER"
 						"MoveSpeed"	"%move_speed"
+				        "damage_value"	"%damage"
 						"Target"
 						{
-							"Center"	"CASTER"
+							"Center"	"CASTER"	
 							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
 							"Radius"	"%damage_radius"
@@ -4242,6 +4250,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage_radius"	"400"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"02"
 			{
@@ -4253,8 +4262,13 @@
 				"var_type"	"FIELD_FLOAT"
 				"move_speed"	"1500"
 			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"damage"	"200 300 400 500"
+				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_3"
+			}
 		}
-		"AbilityDamage"	"200 300 400 500"
 	}
 
 	"ability_thdots_mokou02"
@@ -4265,6 +4279,9 @@
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"MaxLevel"	"4"
 		"ID"	"2031"
 		"precache"
@@ -4325,6 +4342,8 @@
 		{
 			"modifier_mokou02_speed_up"
 			{
+				"IsDebuff"	"0"
+				"IsPurgable"	"0"
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Duration"	"%duration"
 				"Properties"
@@ -4374,8 +4393,9 @@
 		"AbilityTextureName"	"custom/ability_thdots_mokou04"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCooldown"	"95"
 		// Stats
@@ -4413,6 +4433,8 @@
 		{
 			"modifier_thdots_Mokou_04"
 			{
+				"IsDebuff"	"0"
+				"IsPurgable"	"0"
 				"Duration"	"%duration"
 				"Properties"
 				{
@@ -6221,6 +6243,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage"	"60 100 140 180"
+				"LinkedSpecialBonus" "special_bonus_unique_sniper_1"
 			}
 			"03"
 			{
@@ -6365,6 +6388,7 @@
 		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
 		"AbilityCooldown"	"20.5 17 13.5 10"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityManaCost"	"200"
