@@ -5178,6 +5178,8 @@
 		"MaxLevel"	"4"
 		"AbilityCooldown"	"15"
 		"AbilityManaCost"	"60 70 80 90"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"ID"	"2040"
 		"precache"
 		{
@@ -5201,12 +5203,13 @@
 			"Rumia_Buff00"
 			{
 				"Isbuff"	"1"
-				"IsHidden"	"1"
+				"IsHidden"	"0"
+				"IsPurgable"	"0"
 				"Duration"	"%duration"
 				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"25"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
 				}
 				"States"
@@ -5217,6 +5220,8 @@
 			"Rumia_Effect01"
 			{
 				"IsHidden"	"1"
+				"IsBuff"	"1"
+				"IsPurgable"	"0"
 				"Duration"	"%duration"
 				"ThinkInterval"	"0.1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
@@ -5253,6 +5258,11 @@
 				"var_type"	"FIELD_FLOAT"
 				"attack_speed"	 "30 40 50 60"
 			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"evasion"	 "25"
+			}
 		}
 	}
 
@@ -5265,6 +5275,8 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"MaxLevel"	"4"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"ID"	"2041"
 		"precache"
 		{
@@ -5476,6 +5488,7 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_PLAYER_CONTROLLED | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		// Stats---------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
