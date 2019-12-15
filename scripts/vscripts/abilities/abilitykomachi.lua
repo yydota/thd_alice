@@ -74,7 +74,7 @@ function Komachi02_AttackLanded(keys)
 	local deal_damage
 	local ability = caster:FindAbilityByName("ability_thdots_komachi02")
 	if ability~=nil then
-		local Damage = ability:GetSpecialValueFor("damage_val")
+		local Damage = ability:GetAbilityDamage() + FindTelentValue(caster,"special_bonus_unique_elder_titan_2")
 		for _,v in pairs(targets) do
 			local distance = GetDistanceBetweenTwoVec2D(caster:GetOrigin(),v:GetOrigin())
 			if distance < 200 then
@@ -202,7 +202,7 @@ function OnKomachi04SpellStart(keys)
 	target:SetContextThink(DoUniqueString("OnKomachi04SpellStart"), 
 		function ()
 			if GameRules:IsGamePaused() then return 0.03 end
-			if target:GetHealth() < ( target:GetMaxHealth() * (keys.KillHp) * 0.01 ) and target:IsAlive() then 
+			if target:GetHealth() < ( target:GetMaxHealth() * (keys.KillHp + FindTelentValue(caster,"special_bonus_unique_elder_titan_4")) * 0.01 ) and target:IsAlive() then 
 				OnKomachi04KillTarget(keys)
 				ParticleManager:DestroyParticleSystem(effectIndex,true)
 				return nil

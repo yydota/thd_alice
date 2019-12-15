@@ -17,7 +17,7 @@ function OnMinoriko01ProjectileHitUnit(keys)
 		    damage_flags = keys.ability:GetAbilityTargetFlags()
 		}
 		UnitDamageTarget(damage_table) 
-		UtilStun:UnitStunTarget( caster,target,(keys.stun_duration))
+		UtilStun:UnitStunTarget( caster,target,(keys.stun_duration+FindTelentValue(caster,"special_bonus_unique_huskar_3")))
 		local targets = FindUnitsInRadius(
 				   caster:GetTeam(),		
 				   target:GetOrigin(),	
@@ -58,7 +58,7 @@ function OnMinoriko02SpellStart(keys)
 	local caster = EntIndexToHScript(keys.caster_entindex)
 	THDReduceCooldown(keys.ability,FindTelentValue(caster,"special_bonus_unique_huskar_4"))
 	local targetPoint = keys.target_points[1]
-	local NewDuration = keys.duration - 1
+	local NewDuration = keys.duration + FindTelentValue(caster,"special_bonus_unique_huskar_4") - 1
 
 	local minoriko02 = CreateUnitByName(
 		"npc_thdots_unit_minoriko02_box"
@@ -134,7 +134,7 @@ function OnMinoriko04SpellStart(keys)
 						   caster:GetTeam(),		
 						   target:GetOrigin(),	
 						   nil,					
-						   keys.radius,		
+						   keys.radius + FindTelentValue(caster,"special_bonus_unique_huskar"),			
 						   DOTA_UNIT_TARGET_TEAM_ENEMY,
 						   keys.ability:GetAbilityTargetType(),
 						   0,
