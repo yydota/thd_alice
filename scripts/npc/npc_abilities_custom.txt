@@ -13489,7 +13489,6 @@
 		"BaseClass"           	    "ability_datadriven"
 		"AbilityBehavior"   	    "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityTextureName"	"custom/ability_thdots_yuuka01"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_1"
 		
@@ -13516,6 +13515,7 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"duration"				"2.0 2.8 3.6 4.4"
+				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_2"
 			}
 			"03"
 			{
@@ -13585,6 +13585,8 @@
 		"AbilityUnitTargetTeam"	   "DOTA_UNIT_TARGET_TEAM_ENEMY"
         "AbilityTextureName"	"custom/ability_thdots_yuuka02"
     	"AbilityCastAnimation"     "Act_DOTA_CAST_ABILITY_2"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
         "MaxLevel"                 "4"
 
         // Stats 
@@ -13660,6 +13662,8 @@
 		"AbilityUnitTargetFlags"   "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
         "AbilityTextureName"	"custom/ability_thdots_yuuka03"
     	"AbilityCastAnimation"     "Act_DOTA_CAST_ABILITY_3"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
         "MaxLevel"                 "4"
 
         // Stats 
@@ -13826,6 +13830,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
     	"AbilityCastAnimation"     	"Act_DOTA_CAST_ABILITY_1"
 		"MaxLevel"				  	"1"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		
         // Stats 
         //----------------------------------------------------------------
@@ -13845,6 +13850,7 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"max_flower"			"5"
+				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_3"
 			}
 			"02"
 			{
