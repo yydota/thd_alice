@@ -12065,6 +12065,8 @@
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
 		"AbilityCooldown"	"18 16 14 12"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityManaCost"	"100"
@@ -12093,7 +12095,9 @@
 			"modifier_minamitsu01_pause"
 			{
 				"States"
-				{
+				{				
+				    "IsDebuff"	"1"
+				    "IsPurgable"	"0"
 					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
 				}
 			}
@@ -12132,6 +12136,8 @@
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"25 23 21 19"
 		"AbilityManaCost"	"150"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"		
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityCastRange"	"900"
@@ -12164,6 +12170,8 @@
 		{
 			"modifier_minamitsu02_pause"
 			{
+			    "IsDebuff"	"1"
+				"IsPurgable"	"0"
 				"States"
 				{
 					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -12172,6 +12180,8 @@
 			}
 			"modifier_minamitsu02_vortex_pause_target"
 			{
+			    "IsDebuff"	"1"
+				"IsPurgable"	"0"
 				"States"
 				{
 					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -12180,6 +12190,8 @@
 			}
 			"modifier_minamitsu02_vortex_target"
 			{
+				"IsDebuff"	"1"
+				"IsPurgable"	"0"
 				"States"
 				{
 					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -12196,6 +12208,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage_radius"	"200 250 300 350"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"02"
 			{
@@ -12217,6 +12230,8 @@
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
 		"AbilityCooldown"	"15"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityManaCost"	"75"
@@ -12245,6 +12260,8 @@
 		{
 			"modifier_thdots_minamitsu03_bonus"
 			{
+				"IsDebuff"	"0"
+				"IsPurgable"	"0"
 				"Duration"	"%ability_duration"
 				"OnCreated"
 				{
@@ -12387,7 +12404,7 @@
 			}
 			"modifier_minamitsu04_ship_destroy"
 			{
-				"Duration"	"10.0"
+				"Duration"	"%move_slow_duration"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%move_slow"
@@ -12427,6 +12444,11 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"move_slow"	"-400.0"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"move_slow_duration"	"10"
 			}
 		}
 	}
@@ -12507,6 +12529,8 @@
 		"AbilityCastPoint"	"0.1"
 		"AbilityCooldown"	"10"
 		"AbilityCastRange"	"1000"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"precache"
 		{
 			"particle"	"particles/heroes/minamitsu/ability_minamitsu_04_boom.vpcf"
