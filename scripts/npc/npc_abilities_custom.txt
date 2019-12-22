@@ -15219,6 +15219,7 @@
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityTextureName"		"custom/ability_thdots_nueEx"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_1"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"					"1"
 		
 		// Stats
@@ -15268,6 +15269,8 @@
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityTextureName"		"custom/ability_thdots_nue01"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_1"
 		
 		// Stats
@@ -15317,7 +15320,9 @@
 				}
 			}
 			"modifier_nue_01_extradamage"
-			{
+			{				
+			    "Isbuff"	"1"
+				"IsPurgable"	"0"
 				"Duration"				"%duration"
 			}
 		}
@@ -15344,6 +15349,8 @@
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"MaxLevel"				"4"
 		"AbilityCastPoint"		"1.0"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
@@ -15459,6 +15466,9 @@
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"AbilityCastPoint"		"2.0"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"		"120 105 90"
