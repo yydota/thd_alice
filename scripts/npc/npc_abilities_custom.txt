@@ -3896,6 +3896,9 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_flandre02"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		// Stats
 		// ----------------------------------------------------------------
@@ -3969,6 +3972,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"decrease_max_speed"	"1 2 3 4"
+				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_3"
 			}
 			"03"
 			{
@@ -3987,6 +3991,8 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_flandre04"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
