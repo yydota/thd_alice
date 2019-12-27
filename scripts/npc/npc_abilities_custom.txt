@@ -18597,6 +18597,7 @@
 			{
 				"var_type"						"FIELD_INTEGER"
 				"duration"						"1"
+				"LinkedSpecialBonus"		"special_bonus_unique_viper_1"
 			}
 			"03"
 			{
@@ -18690,9 +18691,11 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AOERadius" 					"%radius"
 		"FightRecapLevel"				"1"
 		"AbilityTextureName"			"custom/ability_thdots_medicine02"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"MaxLevel"						"4"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_2"
 		
@@ -18772,6 +18775,7 @@
 			{
 				"var_type"			"FIELD_FLOAT"
 				"damage"			"40 60 80 100"
+				"LinkedSpecialBonus"		"special_bonus_unique_viper_3"
 			}
 			"04"
 			{
@@ -18786,6 +18790,8 @@
 		"BaseClass"			"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_medicine03"
 		"MaxLevel"						"4"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -18871,6 +18877,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"poison_damage_factor"	"0.4"
+				"LinkedSpecialBonus"		"special_bonus_unique_viper_2"
 			}
 			"04"
 			{
@@ -18897,7 +18904,9 @@
 		"AbilityBehavior"   	    "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_4"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"					"3"		
 		// Stats
