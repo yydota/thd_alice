@@ -2382,6 +2382,8 @@
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityCooldown"	"10"
 		"AbilityName" "thdots_aya01"
 		"ScriptFile"	"scripts/vscripts/abilities/abilityAya.lua"
@@ -2443,6 +2445,7 @@
 							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_OTHER"
 						}
 						"MoveSpeed"	"%move_speed"
+						"Dmg" "%damage_value"
 					}
 				}
 				"States"
@@ -2462,6 +2465,7 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage_radius"	"200"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
@@ -2473,8 +2477,13 @@
 				"var_type"	"FIELD_FLOAT"
 				"fix_distance"	"600 900 1200 1500"
 			}
+			"05"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"damage_value"	"80 130 180 230"
+				"LinkedSpecialBonus"		"special_bonus_unique_slark_4"
+			}
 		}
-		"AbilityDamage"	"80 130 180 230"
 	}
 
 	"ability_thdots_aya02"
@@ -2485,6 +2494,8 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
@@ -2571,6 +2582,9 @@
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"MaxLevel"	"4"
 		"ID"	"2013"
 		"precache"
@@ -2616,6 +2630,8 @@
 							}
 							"ApplyModifier"
 							{
+								"IsDebuff"	"1"
+								"IsPurgable"	"1"
 								"ModifierName"	"modifier_aya03_slow"
 								"Target"
 								{
@@ -2688,6 +2704,8 @@
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"	"88"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityManaCost"	"150 250 350"

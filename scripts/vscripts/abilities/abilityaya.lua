@@ -98,7 +98,7 @@ function AbilityAya:OnAya01Move(keys)
 				ability = keys.ability,
 			    victim = v,
 			    attacker = caster,
-			    damage = keys.ability:GetAbilityDamage()+FindTelentValue(caster,"special_bonus_unique_slark_4"),
+			    damage = keys.Dmg+FindTelentValue(caster,"special_bonus_unique_slark_4"),
 			    damage_type = keys.ability:GetAbilityDamageType(), 
 	    	    damage_flags = 0
 		    }
