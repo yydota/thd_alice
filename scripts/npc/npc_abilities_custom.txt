@@ -10106,7 +10106,7 @@
 		// ----------------------------------------------------------------
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"precache"
-		{rei
+		{
 			"particle"	"particles/econ/courier/courier_master_chocobo/courier_master_chocobo_ambient_death_b.vpcf"
 			"particle"	"particles/units/heroes/hero_mirana/mirana_moonlight_owner.vpcf"
 		}
