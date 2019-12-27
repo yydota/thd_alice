@@ -8381,6 +8381,9 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_reisenOldex"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"MaxLevel"	"1"
 		"precache"
@@ -8576,6 +8579,8 @@
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"MaxLevel"				"4"
 		"AbilityCastPoint"		"0.7"
 		"AbilityCastAnimation"		"ACT_DOTA_ATTACK2"	
@@ -8679,6 +8684,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"	"30"
@@ -8703,6 +8710,8 @@
 		{
 			"ability_reisenold04_modifier"
 			{
+				"Isbuff"	"1"
+				"IsPurgable"	"0"
 				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"EffectName"	"particles/heroes/reisen/ability_reisen02.vpcf"
 				"EffectAttachType"	"attach_hitloc"
@@ -10088,7 +10097,7 @@
 		// ----------------------------------------------------------------
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"precache"
-		{
+		{rei
 			"particle"	"particles/econ/courier/courier_master_chocobo/courier_master_chocobo_ambient_death_b.vpcf"
 			"particle"	"particles/units/heroes/hero_mirana/mirana_moonlight_owner.vpcf"
 		}
