@@ -135,11 +135,11 @@ function OnRumia04Start(keys)
 	    			Rumia_Strength_Up = Rumia_Strength_Up + 1 + 1*FindTelentValue(caster,"special_bonus_unique_lifestealer") 
 	    			strength = 1 + 1*FindTelentValue(caster,"special_bonus_unique_lifestealer") 
 	    		end
-				caster:SetHealth(caster:GetHealth() + target:GetHealth()*keys.StealHealth)
+				caster:SetHealth(caster:GetHealth() + target:GetHealth()*keys.StealHealth*0.01)
 	    		caster:SetContextNum("Rumia04_Strength_Up",Rumia_Strength_Up,0)
 	    		caster:SetBaseStrength(caster:GetBaseStrength() + strength)
 	    	else
-	    		caster:SetHealth(caster:GetHealth() + keys.ability:GetAbilityDamage()*keys.StealHealth)
+	    		caster:SetHealth(caster:GetHealth() + keys.ability:GetAbilityDamage()*keys.StealHealth*0.01)
 	    	end
 	    	UnitDamageTarget(DamageTable)
 	    end
@@ -150,7 +150,7 @@ function OnRumiaDead(keys)
 	if caster ~= nil then
 		local Rumia_Strength_Up = caster:GetContext("Rumia04_Strength_Up")
 		if ( Rumia_Strength_Up <= 0 or Rumia_Strength_Up == nil ) then return end	
-		local strengthDown = Rumia_Strength_Up*keys.LostStrength
+		local strengthDown = Rumia_Strength_Up*keys.LostStrength*0.01
 		Rumia_Strength_Up = Rumia_Strength_Up - strengthDown
 		caster:SetContextNum("Rumia04_Strength_Up",Rumia_Strength_Up,0)
 		caster:SetBaseStrength(caster:GetBaseStrength() - strengthDown)

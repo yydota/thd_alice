@@ -121,7 +121,7 @@ end
 
 function OnMokou04SpellStart(keys)
 	local caster = EntIndexToHScript(keys.caster_entindex)
-	local dealdamage = caster:GetHealth() * keys.CostHp
+	local dealdamage = caster:GetHealth() * keys.CostHp * 0.01
 	local damage_table = {
 				ability = keys.ability,
 			    victim = caster,

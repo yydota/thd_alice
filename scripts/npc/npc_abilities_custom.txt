@@ -2682,7 +2682,7 @@
 			}
 			"02"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_slow"	"-15"
 			}
 			"03"
@@ -4520,7 +4520,7 @@
 			"06"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"costhp"	"0.25"
+				"costhp"	"25"
 			}
 		}
 	}
@@ -4897,7 +4897,7 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_slow"	"-40"
 			}
 			"04"
@@ -5593,12 +5593,12 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"lostStrengthPercentage"	"0.2"
+				"lostStrengthPercentage"	"20"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"stealHealthPercentage"	"0.3 0.5 0.8"
+				"stealHealthPercentage"	"30 50 80"
 			}
 		}
 		"AbilityDamage"	"250 425 600"
@@ -8437,7 +8437,7 @@
 			}
 			"02"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_slow"	"-30"
 			}
 			"03"
@@ -11028,12 +11028,12 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"slow_movement_pct"	"-50"
 			}
 			"04"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"slow_attackspeed"	"-20"
 			}
 			"05"
@@ -12586,7 +12586,7 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_slow"	"-400.0"
 			}
 			"04"
@@ -18826,7 +18826,7 @@
 			}
 			"04"
 			{
-				"var_type"			"FIELD_FLOAT"
+				"var_type"			"FIELD_INTEGER"
 				"decrease_speed"		"-25 -30 -35 -40"
 			}			
 		}
