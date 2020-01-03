@@ -1975,8 +1975,7 @@
 		"Ability1"	"ability_thdots_momiji01"
 		"Ability2"	"ability_thdots_momiji02"
 		"Ability3"	"ability_thdots_momiji03"
-		"Ability4"	"ability_system_criticalstrike"
-		
+		"Ability4"	"ability_thdots_momijiex"
 		"Ability5"		"generic_hidden"		
 		"Ability6"		"ability_thdots_momiji04"
 		"Ability10"		"special_bonus_exp_boost_15"
@@ -2309,7 +2308,7 @@
 		"Ability1"	"ability_thdots_cirno01"
 		"Ability2"	"ability_thdots_cirno02"
 		"Ability3"	"ability_thdots_cirno03"
-		"Ability4"		"generic_hidden"
+		"Ability4"	"ability_thdots_cirnoex"
 		"Ability5"		"generic_hidden"		
 		"Ability6"	"ability_thdots_cirno04"
 		"Ability10"		"special_bonus_hp_250"

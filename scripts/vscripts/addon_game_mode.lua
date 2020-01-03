@@ -1077,6 +1077,7 @@ function THDOTSGameMode:OnHeroSpawned(keys)
     end
 end
 
+--天生技能升级
 function THDOTSGameMode:PrecacheHeroResource(hero)
     local heroName = hero:GetClassname()
     local context
@@ -1149,27 +1150,15 @@ function THDOTSGameMode:PrecacheHeroResource(hero)
     elseif (heroName == "npc_dota_hero_silencer") then
         abilityEx = hero:FindAbilityByName("ability_thdots_eirinex")
         abilityEx:SetLevel(1)
-        hero.ability_eirinEx_count = 0
-        hero:SetContextThink(DoUniqueString("Thdots_eirinEx_passive"),
-                             function()
-            if GameRules:IsGamePaused() then return 0.03 end
-            hero.ability_eirinEx_count = hero.ability_eirinEx_count + 1
-            if (hero.ability_eirinEx_count >= 81) then
-                hero.ability_eirinEx_count = 0
-                hero:SetBaseIntellect(hero:GetBaseIntellect() + 1)
-            end
-            if (hero:FindModifierByName("modifier_silencer_int_steal") ~= nil) then
-                hero:RemoveModifierByName("modifier_silencer_int_steal")
-            end
-            return 1.0
-        end, 1.0)
     elseif (heroName == "npc_dota_hero_bounty_hunter") then
-        abilityEx = hero:FindAbilityByName("ability_system_criticalstrike")
+        abilityEx = hero:FindAbilityByName("ability_thdots_momijiex")
         abilityEx:SetLevel(1)
     elseif (heroName == "npc_dota_hero_tinker") then
         abilityEx = hero:FindAbilityByName("ability_thdots_yumemiEx")
         abilityEx:SetLevel(1)
     elseif (heroName == "npc_dota_hero_axe") then
+        abilityEx = hero:FindAbilityByName("ability_thdots_cirnoex")
+        abilityEx:SetLevel(1)
         hero:SetContextThink("ability_cirno_ex", function()
             if GameRules:IsGamePaused() then return 0.03 end
             if hero:GetIntellect() ~= 9 then
