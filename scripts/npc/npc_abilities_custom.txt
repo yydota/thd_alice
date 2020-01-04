@@ -852,28 +852,28 @@
 				"bounce_time"			"2 2 2 3"
 				"LinkedSpecialBonus"	"special_bonus_unique_lina_1"
 			}
-			"01"
+			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"first_damage"			"80 160 240 240"
 				"LinkedSpecialBonus"	"special_bonus_unique_lina_2"
 			}
-			"02"
+			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"stun_duration"	"0.6"
 			}
-			"03"
+			"04"
 			{
 				"var_type"	"FIELD_INTEGER"
 				"damage_follow_percentage"	"50"
 			}
-			"04"
+			"05"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"stun_duration_follow"	"0.4"
 			}
-			"05"
+			"06"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"radius"	"200"
