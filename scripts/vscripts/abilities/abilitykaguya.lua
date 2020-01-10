@@ -55,7 +55,7 @@ function OnKaguya01SpellThink(keys)
 			end
 		end
 		keys.ability:ApplyDataDrivenModifier(caster, v, "modifier_thdots_kaguya01_exdamage", {})
-		local deal_damage = keys.ability:GetAbilityDamage() + FindTelentValue(caster,"special_bonus_unique_furion_2")+v.kaguya01_exdamage_count*keys.ExDamage
+		local deal_damage = keys.BaseDamage + FindTelentValue(caster,"special_bonus_unique_furion_2")+v.kaguya01_exdamage_count*keys.ExDamage
 		local damage_table = {
 				ability = keys.ability,
 			    victim = v,
@@ -72,7 +72,7 @@ function OnKaguya01SpellThink(keys)
 			ability = keys.ability,
 			victim = caster,
 			attacker = caster,
-			damage = keys.HealthCost * caster:GetMaxHealth(),
+			damage = keys.HealthCost * 0.01 * caster:GetMaxHealth(),
 			damage_type = keys.ability:GetAbilityDamageType(), 
 			damage_flags = 0
 	}
@@ -179,7 +179,7 @@ function OnKaguya04Passive(keys)
 		caster.ability_kaguya_04_mana_store = 0
 	end
 	if(lostHp>0)then
-		if FindTelentValue(caster,"special_bonus_unique_meepo_2")==1 then
+		if FindTelentValue(caster,"special_bonus_unique_meepo_2") > 10 then
 			if(caster:GetMana()>=lostHp*keys.CostMana)then
 				caster:SetHealth(caster:GetHealth() + lostHp)
 				caster:SetMana(caster:GetMana() - lostHp*keys.CostMana)
@@ -187,32 +187,33 @@ function OnKaguya04Passive(keys)
 				caster:SetHealth(caster:GetHealth() + caster:GetMana())
 				caster:SetMana(0)
 			end
-			caster.ability_kaguya_04_mana_store = 700
+			caster.ability_kaguya_04_mana_store = 999
 		else
-			if(lostHp <= keys.HpRegen)then
+			if(lostHp <= keys.HpRegen * 0.1)then
 				if(caster:GetMana()>=lostHp*keys.CostMana)then
 					caster:SetHealth(caster:GetHealth() + lostHp)
 					caster:SetMana(caster:GetMana() - lostHp*keys.CostMana)
 					caster.ability_kaguya_04_mana_store = caster.ability_kaguya_04_mana_store + lostHp*keys.CostMana
 				end
 			else
-				if(caster:GetMana()>=keys.HpRegen*keys.CostMana)then
-					caster:SetHealth(caster:GetHealth() + keys.HpRegen)
-					caster:SetMana(caster:GetMana() - keys.HpRegen*keys.CostMana)
-					caster.ability_kaguya_04_mana_store = caster.ability_kaguya_04_mana_store + keys.HpRegen*keys.CostMana
+				if(caster:GetMana()>=keys.HpRegen*keys.CostMana * 0.1)then
+					caster:SetHealth(caster:GetHealth() + keys.HpRegen * 0.1)
+					caster:SetMana(caster:GetMana() - keys.HpRegen*keys.CostMana * 0.1)
+					caster.ability_kaguya_04_mana_store = caster.ability_kaguya_04_mana_store + keys.HpRegen*keys.CostMana * 0.1
 				end
 			end
 		end
 	else
 		if(caster.ability_kaguya_04_mana_store~=nil)then
 			if(caster.ability_kaguya_04_mana_store>=0)then
-				caster.ability_kaguya_04_mana_store = caster.ability_kaguya_04_mana_store - caster:GetMaxMana() * keys.Decrease_speed
+				caster.ability_kaguya_04_mana_store = caster.ability_kaguya_04_mana_store - caster:GetMaxMana() * keys.Decrease_speed * 0.001
 				if(caster.ability_kaguya_04_mana_store<0)then
 					caster.ability_kaguya_04_mana_store =0
 				end
 			end
 		end
 	end
+	caster:SetModifierStackCount("modifier_thdots_kaguya04_passive",caster , caster.ability_kaguya_04_mana_store)
 end
 
 function OnKaguya04Think(keys)

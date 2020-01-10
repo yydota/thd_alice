@@ -6902,6 +6902,8 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_kaguyaEx"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"MaxLevel"	"4"
 		"precache"
@@ -6953,12 +6955,13 @@
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"hp_regen"	"16"
+				"hp_regen"	"160"
+                "LinkedSpecialBonus"		"special_bonus_unique_meepo_2"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"decrease_speed"	"0.004"
+				"decrease_speed"	"4"
 			}			
 		}		
 	}
@@ -6969,6 +6972,8 @@
 		"AbilityTextureName"	"custom/ability_thdots_kaguya01"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCooldown"	"14"
@@ -7019,6 +7024,7 @@
 						"HealthCost"	"%health_cost"
 						"DamageRadius"	"%damage_radius"
 						"ExDamage"	"%ex_damage"
+						"BaseDamage"	"%base_damage"
 					}
 					"FireSound"
 					{
@@ -7046,24 +7052,31 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage_interval"	"0.3"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"health_cost"	"0.05"
+				"health_cost"	"5"
 			}
 			"04"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"damage_radius"	"250"
+				"CalculateSpellDamageTooltip"	"0"
 			}
-			"04"
+			"05"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"ex_damage"	"26 32 42 50"
 			}
+			"06"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"base_damage"	"60 90 120 150"			
+                "LinkedSpecialBonus"		"special_bonus_unique_furion_2"
+			}
 		}
-		"AbilityDamage"	"60 90 120 150"
 	}
 
 	"ability_thdots_kaguya02"
@@ -7072,6 +7085,8 @@
 		"AbilityTextureName"	"custom/ability_thdots_kaguya02"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"0.3"
@@ -7343,6 +7358,12 @@
 				"var_type"	"FIELD_FLOAT"
 				"increase_time"	"90"
 			}
+			"03"
+			{
+			    //No effect, for ability description
+				"var_type"	"FIELD_FLOAT"
+				"night_duration"	"60"
+			}
 		}
 	}
 
@@ -7418,12 +7439,17 @@
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"stun_duration"	"1.0"
+				"max_duration"	"2.8"
 			}
 			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
 				"radius"	"100"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"stun_duration"	"1.0"
 			}
 		}
 		"AbilityDamage"	"20 30 40"
@@ -7436,6 +7462,9 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -7496,7 +7525,7 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_slow"	"-40"
 			}
 		}
@@ -7510,6 +7539,9 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
@@ -7590,6 +7622,8 @@
 		"AbilityTextureName"	"custom/ability_thdots_sanae03"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		// Data driven
 		// -------------------------------------------------------------------------------------------------------------
 		"Modifiers"
@@ -7641,6 +7675,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"	"135 125 115"
@@ -12613,6 +12649,9 @@
 		"AbilityTextureName"	"custom/ability_thdots_yukariEx"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"MaxLevel"	"5"
 		"AbilityCastPoint"	"0.5"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -12679,8 +12718,10 @@
 		"AbilityTextureName"	"custom/ability_thdots_yukari01"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -12761,6 +12802,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"27 22 17 12"
@@ -12845,6 +12888,12 @@
 			{
 				"var_type"	"FIELD_FLOAT"
 				"hero_hidden_duration"	"1.5 2.0 2.5 3.0"
+                "LinkedSpecialBonus"		"special_bonus_unique_outworld_devourer_2"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"unit_max"	"36"
 			}
 		}
 	}
@@ -12853,9 +12902,10 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_yukari03"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
 		"AbilityCooldown"	"85 70 55 40"
 		"AbilityManaCost"	"90"
@@ -12925,6 +12975,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"3"
 		"AbilityCastPoint"	"0.2"
