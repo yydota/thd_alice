@@ -33,11 +33,11 @@ end
 function OnByakuren02SpellStart(keys)
 	if is_spell_blocked(keys.target) then return end
 	local caster = EntIndexToHScript(keys.caster_entindex)
-	local manaCost = keys.ManaCost * caster:GetMana()		--消耗当前法力值*蓝耗系数
+	local manaCost = keys.ManaCost * 0.01 * caster:GetMana()		--消耗当前法力值*蓝耗系数
 	caster:SetMana(caster:GetMana()-manaCost)
 	local vecCaster = caster:GetOrigin()
 	local target = keys.target
-	local dealdamage = keys.AbilityMulti * caster:GetMaxMana() --伤害为伤害系数*最大法力值
+	local dealdamage = keys.AbilityMulti * 0.01 * caster:GetMaxMana() --伤害为伤害系数*最大法力值
 	local damage_target = {
 		victim = keys.target,
 		attacker = caster,
@@ -94,7 +94,7 @@ function OnByakuren04SpellStart(keys)
 	local caster = EntIndexToHScript(keys.caster_entindex)
 	local vecCaster = caster:GetOrigin()
 	local targets = keys.target_entities
-	local dealdamage = keys.ability:GetAbilityDamage() + keys.AbilityMulti * ( caster:GetMaxHealth() - caster:GetHealth())
+	local dealdamage = keys.ability:GetAbilityDamage() + keys.AbilityMulti * 0.01 * ( caster:GetMaxHealth() - caster:GetHealth())
 	local damage_target = {
 		ability = keys.ability,
 		victim = keys.target,
@@ -149,7 +149,7 @@ end
 function OnByakuren04SpellThink(keys)
 	local caster = EntIndexToHScript(keys.caster_entindex)
 	local ability = keys.ability
-	local increaseHealth = caster:GetMaxMana() * ( keys.BounsHealth + ( ability:GetLevel() - 1 ) * 0.2 ) 
+	local increaseHealth = caster:GetMaxMana() * ( keys.BounsHealth * 0.01 + ( ability:GetLevel() - 1 ) * 0.2 ) 
 	local effectIndex
 	caster:SetModifierStackCount("passive_byakuren04_bonus_health", ability, increaseHealth)
 	if(caster:GetHealth()<1 and caster.isReborn == true)then

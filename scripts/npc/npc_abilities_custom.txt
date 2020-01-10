@@ -2950,12 +2950,12 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"ability_multi"	"0.1 0.16 0.22 0.28"
+				"ability_multi"	"10 16 22 28"
 			}
 			"02"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"mana_cost"	"0.32"
+				"mana_cost"	"32"
 			}
 		}
 	}
@@ -3092,7 +3092,7 @@
 			"01"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"ability_multi"	"0.01 0.02 0.03"
+				"ability_multi"	"1 2 3"
 			}
 			"02"
 			{
@@ -3102,7 +3102,7 @@
 			"03"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"health_increase"	"0.5 0.7 0.9"
+				"health_increase"	"50 70 90"
 			}
 			"04"
 			{
@@ -9053,6 +9053,8 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC "
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -9254,6 +9256,8 @@
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_shikieiki03"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
