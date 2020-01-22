@@ -11309,6 +11309,8 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"MaxLevel"	"2"
 		"Modifiers"
 		{
@@ -11411,6 +11413,7 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
 		"AbilityCastPoint"	"0.2"
 		"AOERadius"	"%damage_radius"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -11455,6 +11458,7 @@
 			{
 				"var_type"	"FIELD_INTEGER"
 				"damage_radius"		"200"
+                "CalculateSpellDamageTooltip"	"0"
 			}
 			"02"
 			{
@@ -11472,8 +11476,10 @@
 		"AbilityTextureName"	"custom/ability_thdots_yasaka02"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"30 25 20 15"
@@ -11543,6 +11549,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
@@ -11641,12 +11649,12 @@
 			}
 			"05"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"debuff_physical_armor"	"-4 -5 -6 -7"
 			}
 			"06"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"debuff_magic_armor"	"-4 -8 -12 -16"
 			}
 			"07"
@@ -11655,7 +11663,6 @@
 				"debuff_duration"	"12"
 			}
 		}
-		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityDamage"	"100 150 200 250"
 	}
 
@@ -11811,12 +11818,12 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"attack_speed_down"	"-25 -50 -75"
 			}
 			"04"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"damage_reduction"	"-10 -18 -26"
 			}
 			"05"
@@ -11844,6 +11851,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -11915,7 +11924,8 @@
 			"06"
 			{
 				"var_type"	"FIELD_FLOAT"
-				"damage_radius"	"155"
+				"damage_radius"	"155"				
+                "CalculateSpellDamageTooltip"	"0"
 			}
 		}
 		"AbilityDamage"	"70 115 160 205"
@@ -11928,6 +11938,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"16"
@@ -12012,6 +12024,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_3"
 		"AbilityCooldown"	"18"
@@ -12074,7 +12088,7 @@
 			"modifier_thdots_yasaka43_regen"
 			{
 				"IsBuff"	"1"
-				"IsPurgable"	"0"
+				"IsPurgable"	"1"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%health_regen"
@@ -13088,6 +13102,8 @@
 		"AbilityTextureName"	"custom/ability_thdots_RanEx"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"MaxLevel"	"1"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
 		// Stats
 		// ----------------------------------------------------------------
 		"AbilityCooldown"	"30"
@@ -13145,6 +13161,8 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"Act_DOTA_CAST_ABILITY_1"
@@ -13239,6 +13257,8 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"custom/ability_thdots_ran02"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityCastPoint"	"0.2"
@@ -13304,7 +13324,7 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"slow_movement_pct"	"-80"
 			}
 		}
@@ -13317,6 +13337,7 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"MaxLevel"	"4"
 		"AbilityCastPoint"	"0.2"
