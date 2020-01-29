@@ -4968,7 +4968,7 @@
 			}
 			"03"
 			{
-				"var_type"	"FIELD_FLOAT"
+				"var_type"	"FIELD_INTEGER"
 				"move_speed"	"-40"
 			}
 		}
@@ -18077,6 +18077,8 @@
 		"AbilityBehavior"   	    "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"		
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_NO"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_1"
 		// Stats
 		//----------------------------------------------------------------
@@ -18136,8 +18138,10 @@
 			}
 			"modifier_thdots_satori01_time_up"
 			{
-				"IsHidden"	"1"
+				"IsHidden"	"0"
 				"RemoveOnDeath"	"0"
+				"IsBuff"	"1"
+				"IsPurgable"	"0"
 				"Duration"	"%steal_duration"				
 				"OnDestroy"
 				{
@@ -18171,6 +18175,8 @@
 		"AbilityBehavior"   	    "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_2"
 		"AbilityUnitDamageType"		"DAMAGE_TYPE_PURE"
 		"MaxLevel"					"4"		
@@ -18290,6 +18296,7 @@
 		"AbilityBehavior"   	    "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_2"
 		"MaxLevel"					"4"
 		// Stats
@@ -18366,6 +18373,8 @@
 		"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityCastAnimation"      "Act_DOTA_CAST_ABILITY_3"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType" "SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"					"3"		
 		// Stats
 		//----------------------------------------------------------------
