@@ -1095,7 +1095,11 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 
+	
 	//下面这些是用来给商店中移除物品的，如果你想从商店中移除某个物品，就把他前面的//去掉，
+
+	"item_keen_optic"				"REMOVE"
+
 	"item_blink"					"REMOVE"
 	"item_blades_of_attack"			"REMOVE"
 	"item_broadsword"				"REMOVE"
