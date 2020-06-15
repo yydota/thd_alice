@@ -7,12 +7,4 @@
 	{
 					"MaxPlayers"                    "10"
 	}
-	"dota"
-	{
-					"MaxPlayers"                    "10"
-	}
-	"4_thdots_with_coach"
-	{
-					"MaxPlayers"                    "12"
-	}
 }
